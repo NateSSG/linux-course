@@ -16,4 +16,7 @@ Network: NAT
 
 ## Tehtävä 1 a)
 
-Moi kaikki! :D
+This is the first task in this course
+
+## References
+Karvinen, Tero. 2025. Palvelinten hallinta. https://terokarvinen.com/palvelinten-hallinta/
