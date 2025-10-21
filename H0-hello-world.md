@@ -13,3 +13,7 @@ Processor: AMD Ryzen 7 5700x - 6 cores used
 Disk: 60 GB
 
 Network: NAT
+
+## Tehtävä 1 a)
+
+Moi kaikki! :D
