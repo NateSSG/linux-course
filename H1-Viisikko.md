@@ -94,7 +94,7 @@ Esimerkki:
 sudo salt-call --local state.single cmd.run 'echo "Hello from Salt"'
 
 ```
-Tulokset: Komento suoritetaan joka kerta. Ei ole luonnostaan idempotentti, mutta sen voi tehdö idempotentiksi käyttämällä esim. creates, onlyif tai unless. Komento suoritetaan vain, jos ehdot eivät ole jo täyttyneet.
+Tulokset: Komento suoritetaan joka kerta. Ei ole luonnostaan idempotentti, mutta sen voi tehdä idempotentiksi käyttämällä esim. creates, onlyif tai unless. Komento suoritetaan vain, jos ehdot eivät ole jo täyttyneet.
 
 ## Yhteenveto
 
