@@ -44,7 +44,7 @@ sudo apt-get install salt-minion salt-master
 - 4 Testataan toiminta:
 
 ```
-sudo salt-call --local state.single file.managed /tmp/hellotero
+sudo salt-call --local state.single file.managed /tmp/moinathaniel
 
 ```
 
