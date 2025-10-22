@@ -14,7 +14,40 @@ Disk: 65 GB
 
 Network: NAT
 
+## Mikä on Salt?
+
+Salt on konfiguraationhallintatyökalu, joka mahdollistaa useiden (jopa tuhansien) Linux ja WIndows-koneiden hallinnan yhdestä paikasta. Sen avulla järjestelmien asetukset voidaan määritellä infrastruktuurina koodina (Infra as a Code), jolloin hallinta on toistettavaa ja automaattista.
+
 ## Salt Asennus.
+
+- 1. Lisätään uusi ohjelmalähde (repository), koska Salt ei kuulu Debianin oletuslähteisiin.
+     Repository kostuu kahdesta tiedostosta:
+     - PGP-avaimesta, jolla allekirjoitukset varmistetaan.
+     - sources.list -tiedostosta, jossa määritellään latausosoite.
+
+- 2. Ladataan ja asennetaan tiedostot:
+
+```
+wget https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public
+wget https://github.com/saltstack/salt-install-guide/releases/latest/download/salt.sources
+sudo cp public /etc/apt/keyrings/salt-archive-keyring.pgp
+sudo cp salt.sources /etc/apt/sources.list.d/
+```
+
+- 3. Päivitetään pakettilista ja asennetaan Salt:
+
+```
+sudo apt-get update
+sudo apt-get install salt-minion salt-master
+```
+
+- 4. Testataan toiminta:
+
+```
+sudo salt-call --local state.single file.managed /tmp/hellotero
+
+```
+
 
 Käytin apuna teron ohjeita saltin asentamiseen: https://terokarvinen.com/install-salt-on-debian-13-trixie/. Ne oli selitetty tosi selkeesti ja sain saltin ladattua ilman mitään ongelmia.
 
