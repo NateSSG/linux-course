@@ -137,6 +137,10 @@ Tulokset: Komento suoritetaan joka kerta. Ei ole luonnostaan idempotentti, mutta
 - Tämä tekee järjestelmän hallinnasta ennustettavaa ja turvallista.
 
 
+## Lähteet
+
+<a href="https://terokarvinen.com/install-salt-on-debian-13-trixie/">Salt lataus</a>, <a href="https://terokarvinen.com/2021/salt-run-command-locally/">Salt komennot</a>, <a href=" https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/">Salt quickstart</a>
+
   
 
 
