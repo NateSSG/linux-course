@@ -54,4 +54,28 @@ sudo salt-call --local state.single pkg.installed name=vim
 
 <img width="745" height="364" alt="same command but no update" src="https://github.com/user-attachments/assets/be19453a-79b9-4bf0-b692-cacd5755c5fe" />
 
+## 3.service.running (palveluiden hallinta)
+
+-Tarkoitus: Varmistaa, että palvelu on käynnissä ja tarvittaessa käynnistyy automaattisesti.
+
+<img width="734" height="481" alt="failed to run service" src="https://github.com/user-attachments/assets/e374c128-6c72-4dc6-a5c7-907ff73e68c5" />
+
+Tässä kuvassa palvelun käynnistys epäonnistui, koska minulla ei ollut apache2 ladattuna.
+
+
+<img width="739" height="484" alt="apache2 running " src="https://github.com/user-attachments/assets/7e22401d-a659-4db8-a489-793890f9405e" />
+<img width="736" height="477" alt="apache2 disabled" src="https://github.com/user-attachments/assets/98479181-a4a4-4e23-8618-85fc16ebdab2" />
+
+
+Ladattuani apache2, komento toimi niin kuin pitää.
+
+Selitys:
+
+- Salt tarkistaa, että Apache2-palvelu (apache2) on käynnissä.
+- Jos palvelu ei ole käynnissä, Salt käynnistää sen.
+- Jos se on jo käynnissä, Salt ei tee mitään
+
+
+##
+
 
