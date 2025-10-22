@@ -34,7 +34,7 @@ sudo cp public /etc/apt/keyrings/salt-archive-keyring.pgp
 sudo cp salt.sources /etc/apt/sources.list.d/
 ```
 
-- 3. Päivitetään pakettilista ja asennetaan Salt:
+- 3 Päivitetään pakettilista ja asennetaan Salt:
 
 ```
 sudo apt-get update
