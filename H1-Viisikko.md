@@ -20,12 +20,12 @@ Salt on konfiguraationhallintatyökalu, joka mahdollistaa useiden (jopa tuhansie
 
 ## Salt Asennus.
 
-- 1. Lisätään uusi ohjelmalähde (repository), koska Salt ei kuulu Debianin oletuslähteisiin.
+- 1 Lisätään uusi ohjelmalähde (repository), koska Salt ei kuulu Debianin oletuslähteisiin.
      Repository kostuu kahdesta tiedostosta:
      - PGP-avaimesta, jolla allekirjoitukset varmistetaan.
      - sources.list -tiedostosta, jossa määritellään latausosoite.
 
-- 2. Ladataan ja asennetaan tiedostot:
+- 2 Ladataan ja asennetaan tiedostot:
 
 ```
 wget https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public
@@ -41,7 +41,7 @@ sudo apt-get update
 sudo apt-get install salt-minion salt-master
 ```
 
-- 4. Testataan toiminta:
+- 4 Testataan toiminta:
 
 ```
 sudo salt-call --local state.single file.managed /tmp/hellotero
