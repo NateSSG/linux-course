@@ -20,7 +20,7 @@ Käytin apuna teron ohjeita saltin asentamiseen: https://terokarvinen.com/instal
 
 ## Viisi tärkeintä Saltin tilafunktiota Linuxissa
 
-## 1.pkg.installed (pakettien hallinta)
+## 1. pkg.installed (pakettien hallinta)
 
 - Tarkoitus: Varmistaa, että tietty paketti on asennettuna.
   
@@ -35,7 +35,7 @@ sudo salt-call --local state.single pkg.installed name=vim
   
 <img width="859" height="651" alt="pkg removed " src="https://github.com/user-attachments/assets/c1993b4c-c532-473e-8ff7-94c9805cb8b2" />
 
-## 2.file.managed (tiedostojen hallinta)
+## 2. file.managed (tiedostojen hallinta)
 
 - Tarkoitus: Luo tai ylläpitää tiedostoja halutulla sisällöllä ja ominaisuuksilla.
 
@@ -54,7 +54,7 @@ sudo salt-call --local state.single pkg.installed name=vim
 
 <img width="745" height="364" alt="same command but no update" src="https://github.com/user-attachments/assets/be19453a-79b9-4bf0-b692-cacd5755c5fe" />
 
-## 3.service.running (palveluiden hallinta)
+## 3. service.running (palveluiden hallinta)
 
 -Tarkoitus: Varmistaa, että palvelu on käynnissä ja tarvittaessa käynnistyy automaattisesti.
 
@@ -76,6 +76,36 @@ Selitys:
 - Jos se on jo käynnissä, Salt ei tee mitään
 
 
-##
+## 4. user.present (käyttäjien hallinta)
+
+- Tarkoitus: Luo käyttäjän, jos sitä ei ole olemassa.
+
+<img width="1052" height="640" alt="natedabest id created" src="https://github.com/user-attachments/assets/8de34ef8-a12b-4d20-a754-a6feb827966f" />
+
+<img width="884" height="543" alt="removed the user natedabest" src="https://github.com/user-attachments/assets/bce0adbb-a122-449e-b736-e746870fe20e" />
+
+## 5. cmd.run (komentojen suoritus)
+
+- Tarkoitus: Suorittaa mielivaltaisia shell-komentoja.
+
+Esimerkki:
+
+```
+sudo salt-call --local state.single cmd.run 'echo "Hello from Salt"'
+
+```
+Tulokset: Komento suoritetaan joka kerta. Eiu ole luonnostaan idempotentti, mutta sen voi tehdö idempotentiksi käyttämällä esim. creates, onlyif tai unless. Komento suoritetaan vain, jos ehdot eivät ole jo täyttyneet.
+
+## Yhteenveto
+
+- pkg, file, service, user -> kaikki idempotentteja -> järjestelmä ei muutu, jos haluttu tila on jo saavutettu.
+- cmd -> ei idempotentti ilman lisäehtoja
+- idempotenssi on tärkeää, koska Saltin komentoja voidaan ajaa useita kertoja ilman, että järjestelmään tehdään turhia muutoksia.
+- Tämä tekee järjestelmän hallinnasta ennustettavaa ja turvallista.
+
+
+  
+
+
 
 
