@@ -8,7 +8,7 @@ Browser: Firefox 128.3.1esr (64-bit)
 
 Hardware Model: Virtualbox memory used 11 GB
 
-Processor: AMD Ryzen 7 5700x - 6 cores used
+Processor: AMD Ryzen 7 5700X - 6 cores used
 
 GPU: AMD Radeon RX 9060 XT 16GB
 
