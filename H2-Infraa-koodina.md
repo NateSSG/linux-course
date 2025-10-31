@@ -50,6 +50,8 @@ Top file (top.sls):
 
 <img width="500" height="69" alt="printed text from the created file" src="https://github.com/user-attachments/assets/aa09db4f-c184-4fdc-854b-776c3de24276" />
 
+Tässä loin hellonate tiedoston omalle kooneelle tmp kansioon. Tiedosto sisältää tekstin "Greetings fellow comrades, salt has created a file!!"
+
 ## B) Toppping
 
 <img width="395" height="50" alt="topfile creation" src="https://github.com/user-attachments/assets/87017d48-b422-482b-b6b6-11e3ba689b5d" />
@@ -58,7 +60,10 @@ Top file (top.sls):
 <img width="721" height="704" alt="topfile command output" src="https://github.com/user-attachments/assets/c0f5788b-313f-470f-96c2-b75437b3bfe4" />
 <img width="1043" height="628" alt="topfile command output 2" src="https://github.com/user-attachments/assets/c08a8c02-7432-4089-9e16-f20df8cfbb09" />
 
+Topping toimii siten, että luodaan top.sls-tiedosto, johon määritetään kaikki luodut hello, file, service ja user -sls-tiedostot. Kun suoritat komennon sudo salt-call --local state.apply, sinun ei tarvitse erikseen mainita tiettyä tiedostoa — Salt etsii automaattisesti top.sls-tiedoston sisältöineen /srv/salt/-kansiosta ja ajaa sen. Kaikki top.sls-tiedostossa määritetyt tilat suoritetaan, kun komento ajetaan terminaalissa.
+
 ## Viisikko tiedostossa
+Loin jokaisen tiedoston erikseen, joissa on erilaiset funktiot
 
 ## hellopkg luonti
 <img width="809" height="176" alt="hellopkg creation" src="https://github.com/user-attachments/assets/c50cc519-2256-4188-b20c-89dfb84b2b92" />
@@ -103,6 +108,17 @@ Top file (top.sls):
 ## kaikkien sls tiedostot mitkä olin luonut
 
 <img width="528" height="234" alt="all the commands displayed in salt directory" src="https://github.com/user-attachments/assets/0a642c27-312d-45be-a0da-0b01c72269a6" />
+
+## Tee sls-tiedosto
+
+<img width="1284" height="772" alt="new salt minion commands" src="https://github.com/user-attachments/assets/26043788-593d-43eb-b146-780783a87435" />
+
+Loin sls tiedoston nimeltä multicommands jossa oli apache2 lataus sekä käynnistys, greetings_file tiedoston luonti sekä käyttäjä Nathaniel_SSG
+
+<img width="1283" height="705" alt="multicommands 1" src="https://github.com/user-attachments/assets/7a669341-8071-496e-a766-414de7556504" />
+<img width="1280" height="781" alt="multicommands 2" src="https://github.com/user-attachments/assets/9ca92fce-9f59-41be-9b37-37afbc1beb82" />
+
+
 
 ## Testasin salt minioniä
 
@@ -151,4 +167,14 @@ Ajettiin komento uudestaan ja siinä on idempotentti eli ei tehnyt mitään muut
 <img width="632" height="214" alt="evidence that they are on the minion pc as well" src="https://github.com/user-attachments/assets/c3335c6d-1331-4051-8520-22466190d331" />
 
 kuten huomaatte tiedostot näkyvät minion pc:llä
+
+## Lähteet
+
+https://terokarvinen.com/palvelinten-hallinta/#h2-infraa-koodina,
+
+https://terokarvinen.com/2024/hello-salt-infra-as-code/, 
+
+https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules-of-yaml, 
+
+https://docs.saltproject.io/en/latest/ref/states/top.html, 
 
