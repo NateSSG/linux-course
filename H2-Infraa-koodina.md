@@ -115,9 +115,17 @@ Loin jokaisen tiedoston erikseen, joissa on erilaiset funktiot
 
 Loin sls tiedoston nimeltä multicommands jossa oli apache2 lataus sekä käynnistys, greetings_file tiedoston luonti sekä käyttäjä Nathaniel_SSG
 
-<img width="1283" height="705" alt="multicommands 1" src="https://github.com/user-attachments/assets/7a669341-8071-496e-a766-414de7556504" />
-<img width="1280" height="781" alt="multicommands 2" src="https://github.com/user-attachments/assets/9ca92fce-9f59-41be-9b37-37afbc1beb82" />
+<img width="887" height="767" alt="1 blue 3 green" src="https://github.com/user-attachments/assets/af425f1e-e61c-4f10-81cb-352387e50adf" />
+<img width="295" height="134" alt="summary of 1 blue" src="https://github.com/user-attachments/assets/5fb34ae4-6a7b-45d1-9b23-906a8536d2ad" />
 
+
+Ajoin luomani tiedoston. Vastaus oli että 1 uusi muutos on tullut (sinisellä) ja 3 oli ihan ok (vihree)
+
+<img width="995" height="762" alt="all greeeeen" src="https://github.com/user-attachments/assets/6e32ba43-ee9d-45bd-9b6e-7af43aae086c" />
+
+<img width="304" height="140" alt="summary of greeeeeeen" src="https://github.com/user-attachments/assets/40d52de6-cc18-47f6-a1fe-f999af5cb9fd" />
+
+Ajoin sen toisen kerran ja nyt se sanoo että kaikki on ihan ajantasalla eli idempotenttinen. 
 
 
 ## Testasin salt minioniä
