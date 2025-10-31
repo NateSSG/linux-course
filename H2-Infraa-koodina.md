@@ -16,6 +16,32 @@ Disk: 65 GB
 
 Network: NAT
 
+## Tiivistelmä
+
+- Salt “Hello World”: Luodaan yksinkertainen infra-as-code -esimerkki, jossa Salt varmistaa, että tiedosto /tmp/hellotero on olemassa.
+
+YAMLin perussäännöt:
+
+- Käytetään key: value-pareja.
+
+- Vain välilyönnit sallittuja (ei tabulaattoreita).
+
+- Kommentit alkavat #.
+
+Rakenteet: scalareita (arvot), listoja (alkaa -), ja sanakirjoja (sisäkkäisiä key-value -pareja).
+
+Idempotenssi: Saltin toistettu ajaminen ei muuta järjestelmää, jos se on jo halutussa tilassa.
+
+Tärkeimmät Saltin toiminnot: pkg, file, service, user, cmd.
+
+Top file (top.sls):
+
+- Määrittää, mitä konfiguraatioita (state-tiedostoja) sovelletaan millekin koneelle.
+
+- Rakenteessa on kolme tasoa: Environment → Target → States.
+
+- Esim. kaikki koneet, joiden nimi alkaa “web”, saavat apache-tilan.
+
 ## A)  Hei infrakoodi!
 
 <img width="730" height="474" alt="salt sls file creation" src="https://github.com/user-attachments/assets/a7d16f4f-2927-45a5-b897-df7b5c47d1f2" />
