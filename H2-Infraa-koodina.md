@@ -105,7 +105,7 @@ Loin jokaisen tiedoston erikseen, joissa on erilaiset funktiot
 
 <img width="909" height="681" alt="hellocmd command output" src="https://github.com/user-attachments/assets/9582f568-8529-4db0-be81-d9e844fd80af" />
 
-## kaikkien sls tiedostot mitkä olin luonut
+## kaikki sls tiedostot mitkä olin luonut
 
 <img width="528" height="234" alt="all the commands displayed in salt directory" src="https://github.com/user-attachments/assets/0a642c27-312d-45be-a0da-0b01c72269a6" />
 
