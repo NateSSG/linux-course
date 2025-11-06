@@ -1,2 +1,2 @@
 # linux-course
-Homework reports for Linux course taught by Tero Karvinen
+Homework reports for Linux Configuration Management Systems course taught by Tero Karvinen
