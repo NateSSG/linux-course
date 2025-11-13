@@ -16,6 +16,30 @@ Disk: 65 GB
 
 Network: NAT
 
+## Tiivistelmä
+
+- Konfiguraationhallintajärjestelmällä, kuten Saltilla, voidaan hallita suurta määrää palveluita automaattisesti.
+
+- Yleinen malli on pkg-file-service: asenna ohjelmisto, korvaa konfiguraatiotiedosto ja käynnistä demoni uudelleen.
+
+- SSH-palvelimen portin muuttaminen voidaan tehdä yksinkertaisella Salt-statella.
+
+- Masterilla luodaan state-tiedosto (sshd.sls) ja masterin kopio SSH-konfiguraatiosta (sshd_config).
+
+State määrittelee:
+
+- openssh-server paketin asennuksen
+
+- /etc/ssh/sshd_config tiedoston hallinnan masterin kopion perusteella
+
+- sshd palvelun ajon, joka valvoo konfiguraatiotiedoston muutoksia (watch)
+
+- Kun state ajetaan minioneille, konfiguraatio korvaa paikalliset muutokset ja SSH-daemon käynnistyy uudelleen.
+
+- Testaus onnistuu esimerkiksi yhteydellä uuteen porttiin (ssh -p 8888) tai verkon tarkistustyökaluilla (nc -vz).
+
+- Lopputulos: pkg-file-service state toimii, ja SSH-palvelin on konfiguroitu turvallisesti ja automaattisesti.
+
 ## Minion kone
 
 Ensiksi asensimme SSH:n minion-koneelle. Minion koneella konfiguroitiin sshd_config tiedoston, johon laitettiin port 22 ja 2222 tuki. 
@@ -79,4 +103,12 @@ Testasimme myös Saltin valvontamekanismia tekemällä pienen muutoksen minion-k
 <img width="714" height="67" alt="test change minion pc" src="https://github.com/user-attachments/assets/8d366984-d90a-4c8c-ab31-dce2116d7a7b" />
 
 <img width="526" height="781" alt="test change on master pc success" src="https://github.com/user-attachments/assets/12a38de1-1faa-432e-9a91-22085944ad19" />
+
+## Lähteet
+https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh,
+
+https://terokarvinen.com/palvelinten-hallinta/#h4-pkg-file-service
+
+
+
 
