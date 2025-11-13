@@ -1,0 +1,23 @@
+# H3 Soitto Kotiin | Nathaniel Ssendagire 6.11.2025
+## Ympäristö
+
+OS: Windows 11 
+
+Browser: Firefox 128.3.1esr (64-bit)
+
+RAM: 16GB
+
+Processor: AMD Ryzen 7 5700X - 6 cores used
+
+GPU: AMD Radeon RX 9060 XT 16GB
+
+Disk: 65 GB
+
+Network: NAT
+
+
+Ensiksi asensimme SSH:n sekä master- että minion-koneelle. Tämän jälkeen loimme master-koneelle sshd_port-hakemiston, jonka sisällä oli init.sls-tiedosto. Tämä tiedosto määritteli, mitä muutoksia Salt teki minion-koneeseen. Loimme myös sshd_config-tiedoston master-koneelle, jotta minion saisi saman konfiguraation kuin master.
+
+Minion-koneella vastaava sshd_config-tiedosto sijaitsi polussa /etc/ssh/sshd_config, kun taas masterilla se oli Saltin hakemistorakenteessa /srv/salt/sshd_port/sshd_config. Tiedoston asetuksissa estettiin root-käyttäjän kirjautuminen, sallittiin salasanalla kirjautuminen, otettiin käyttöön SFTP (Secure File Transfer Protocol) ja avattiin portit 22 ja 2222 SSH-yhteyksille.
+
+Saltin tila (state.apply sshd_port) päivitti minionin asetukset automaattisesti ja käynnisti SSH-palvelun uudelleen, kun muutokset havaittiin. Tämä osoitti, että file.managed ja service.watch toimivat oikein ja automaatio oli onnistunut.
