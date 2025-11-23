@@ -116,3 +116,16 @@ Salt-tiloja ajettiin paikallisesti Snow-hakemistosta:
     
 Salt suoritti kaikki määritellyt tilat onnistuneesti, mikä osoitti automaation ja deploymentin toimivuuden
 
+## Lähteet
+
+https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F,
+
+https://github.com/terokarvinen/suolax/,
+
+https://github.com/terokarvinen/suolax/commits/main/,
+
+https://terokarvinen.com/palvelinten-hallinta/#h5-toimiva-versio,
+
+
+
+
