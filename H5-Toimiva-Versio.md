@@ -16,6 +16,33 @@ Disk: 65 GB
 
 Network: NAT
 
+## Tiivistelmä
+
+Git on versionhallintajärjestelmä, joka tallentaa projektin tilan snapshoteina (kuvina tiedostoista), ei pelkästään muutoksina tiedostoihin kuten perinteiset VCS-järjestelmät (esim. CVS tai Subversion). Tämä tekee Gitistä erittäin nopean ja paikallisesti toimivan, koska suurin osa operaatioista (historia, diffit, commitit) tapahtuu omalta koneelta ilman verkkoyhteyttä.
+
+Git myös tarkistaa tiedostojen eheyden SHA-1-tarkistussummien avulla, mikä estää tiedon katoamisen tai vahingot siirrossa. Useimmat Git-operaatiot vain lisäävät tietoa tietokantaan, joten once commitattu snapshot on turvallisesti tallessa.
+
+### Git-tiedostojen kolme tilaa:
+
+- Modified (muokattu) – tiedostoa on muutettu, mutta muutokset eivät ole vielä commitattu.
+
+- Staged (valmisteltu) – muutokset on merkitty seuraavaan commit-snapshotiin.
+
+- Committed (commitattu) – muutokset on tallennettu paikalliseen Git-tietokantaan pysyvästi.
+
+Näiden tilojen kautta hallitaan projektin tiedostot työpuussa (working tree), staging-alueella ja Git-hakemistossa (Git directory).
+
+### Perustoiminnot käytännössä:
+
+- git add . – lisää kaikki muutokset staging-alueelle.
+
+- git commit -m "viesti" – tallentaa snapshotin Git-tietokantaan.
+
+- git pull – hakee ja yhdistää etärepositorion muutokset.
+
+- git push – lähettää paikalliset commitit etäpalvelimelle (esim. GitHub).
+
+
 ## Online
 
 <img width="1135" height="762" alt="repo creation" src="https://github.com/user-attachments/assets/f4d3493c-6cd9-49f6-b839-861404462212" />
@@ -103,6 +130,35 @@ Seuraavaksi menin takaisin snow hakemistoon ja otin ssh yhteyden github repooni.
   
 - palauttaa projektin edelliseen pushiin, poistaen ei-toivotut muutokset ja commitin.
 
+
+## Tukki
+
+<img width="709" height="153" alt="checking all the stuff " src="https://github.com/user-attachments/assets/596ee970-61b8-4485-97ce-6095eef72bc7" />
+
+Lokin tarkastelu:
+Komennolla
+
+      git log --oneline --graph --decorate
+      
+voi nähdä repositorio commitit lyhyesti, graafisesti ja merkittynä branchien kanssa. Esimerkki tulosteesta:
+
+            * 568d704 (HEAD -> master, origin/master) Added more content to notes.txt
+            * 05c3975 Add notes file
+
+- Tässä näkyy kaksi viimeisintä commitia.
+
+- HEAD -> master, origin/master kertoo, että paikallinen master-branch ja etärepo ovat synkassa.
+
+- Jokainen commitissa näkyvä hash (esim. 568d704) tunnistaa commitin yksilöllisesti.
+
+Käyttäjätietojen tarkistus:
+- Komennolla:
+
+            git config --global user.name
+            git config --global user.email
+  
+voi varmistaa, että committeihin tallennetaan oikea nimi ja sähköposti.
+
 ## Suolattu Rakki
 
 
@@ -125,6 +181,8 @@ https://github.com/terokarvinen/suolax/,
 https://github.com/terokarvinen/suolax/commits/main/,
 
 https://terokarvinen.com/palvelinten-hallinta/#h5-toimiva-versio,
+
+https://git-scm.com/book/en/v2
 
 
 
