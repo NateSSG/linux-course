@@ -58,4 +58,10 @@ Network: NAT
 
 <img width="675" height="195" alt="reverted back to normal" src="https://github.com/user-attachments/assets/bcf2d6b9-9f4a-47c0-9b2d-a2031dedcb50" />
 
+## Suolattu Rakki
+
+
+<img width="1255" height="583" alt="running salt " src="https://github.com/user-attachments/assets/60cb5d80-23ee-40a0-b4b0-da9f5cef2543" />
+
+<img width="648" height="482" alt="running salt pt2" src="https://github.com/user-attachments/assets/4edf0c32-a68a-47db-95a9-c50367725aec" />
 
